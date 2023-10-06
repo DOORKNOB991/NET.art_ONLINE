@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <head>
+  <style>
+  
+ .container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50;
+  bottom: 0;
+  left: 50;
+  right: 50;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: yellow;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #35459c;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+    #rcorners1 {
+  border-radius: 25px;
+  
+  padding: 20px; 
+  height: 100px;  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100px;
+  background-color: #35459c
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #e7e747;
+  padding: 8px 50px;
+  text-decoration: none;
+  font-size:2vw;
+}
+
+li a.active {
+  background-color: #35459c;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.mySlides {display:none;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+ /* Style the tab */
+.tab {
+    float: left;
+    border: 4px solid white;
+    background-color: #35459c;
+    width: 20%;
+    height: 660px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: #35459c;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Convergence';
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #35459c;
+    color: yellow;
+    font-family: 'Convergence';
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: yellow;
+    color: #35459c; 
+    font-family: 'Convergence';
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: center;
+    padding: 0px 12px;
+    border: 4px solid #ccc;
+    background-color:#35459c;
+    width: 100%;
+    border-color: white;
+    height: 660px;
+    display: none;
+    font-family: 'Convergence';
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    font-family: 'Convergence';
+}
+        /* Style the tab */
+.tab2 {
+    float: left;
+    border: 4px solid white;
+    background-color: #35459c;
+    width: 20%;
+    height: 1000px;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+    display: block;
+    background-color: #35459c;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Convergence';
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+    background-color: #35459c;
+    color: yellow;
+    font-family: 'Convergence';
+}
+
+/* Create an active/current "tab button" class */
+.tab2 button.active {
+    background-color: yellow;
+    color: #35459c; 
+    font-family: 'Convergence';
+}
+
+/* Style the tab content */
+.tabcontent2 {
+    float: center;
+    padding: 0px 12px;
+    border: 4px solid #ccc;
+    background-color:#35459c;
+    width: 100%;
+    border-color: white;
+    height: 1000px;
+    display: none;
+    font-family: 'Convergence';
+}
+    /* Style the tab */
+.tab1 {
+    float: left;
+    border: 4px solid white;
+    background-color: #35459c;
+    width: 20%;
+    height: 1000px;
+}
+
+/* Style the buttons inside the tab */
+.tab1 button {
+    display: block;
+    background-color: #35459c;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Convergence';
+}
+
+/* Change background color of buttons on hover */
+.tab1 button:hover {
+    background-color: #35459c;
+    color: yellow;
+    font-family: 'Convergence';
+}
+
+/* Create an active/current "tab button" class */
+.tab1 button.active {
+    background-color: yellow;
+    color: #35459c; 
+    font-family: 'Convergence';
+}
+
+/* Style the tab content */
+.tabcontent1 {
+    float: center;
+    padding: 0px 12px;
+    border: 4px solid #ccc;
+    background-color:#35459c;
+    width: 100%;
+    border-color: white;
+    height: 1000px;
+    display: none;
+    font-family: 'Convergence';
+}
+
+
+
+       /* Style the tab */
+.tab3 {
+    float: left;
+    border: 4px solid white;
+    background-color: #35459c;
+    width: 20%;
+    height: 800px;
+}
+
+/* Style the buttons inside the tab */
+.tab3 button {
+    display: block;
+    background-color: #35459c;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Convergence';
+}
+
+/* Change background color of buttons on hover */
+.tab3 button:hover {
+    background-color: #35459c;
+    color: yellow;
+    font-family: 'Convergence';
+}
+
+/* Create an active/current "tab button" class */
+.tab3 button.active {
+    background-color: yellow;
+    color: #35459c; 
+    font-family: 'Convergence';
+}
+
+/* Style the tab content */
+.tabcontent3 {
+    float: center;
+    padding: 0px 12px;
+    border: 4px solid #ccc;
+    background-color:#35459c;
+    width: 100%;
+    border-color: white;
+    height: 800px;
+    display: none;
+    font-family: 'Convergence';
+}
+      /* Style the tab */
+.tab4 {
+    float: left;
+    border: 4px solid white;
+    background-color: #35459c;
+    width: 20%;
+    height: 1000px;
+}
+
+/* Style the buttons inside the tab */
+.tab4 button {
+    display: block;
+    background-color: #35459c;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Convergence';
+}
+
+/* Change background color of buttons on hover */
+.tab4 button:hover {
+    background-color: #35459c;
+    color: yellow;
+    font-family: 'Convergence';
+}
+
+/* Create an active/current "tab button" class */
+.tab4 button.active {
+    background-color: yellow;
+    color: #35459c; 
+    font-family: 'Convergence';
+}
+
+/* Style the tab content */
+.tabcontent4 {
+    float: center;
+    padding: 0px 12px;
+    border: 4px solid #ccc;
+    background-color:#35459c;
+    width: 100%;
+    border-color: white;
+    height: 1000px;
+    display: none;
+    font-family: 'Convergence';
+}
+ p {
+    font-family: 'Convergence';
+         color:white;
+         font-size:40px;
+	  /* Style the tab */
+ }
+
+
+</style>
+  </head>
+  <body bgcolor=a1d7f4>
+  <a href="index.html">
+  <div class="logo">
+   <a href="index.html">
+   <img src="images/Logo.png" width=300 height=200 align=left>
+   </a>
+  </div>
+  </a>
+  <div class="navbar">
+  <br><br>
+	<ul align=right id="rcorners1">
+  <li><a href="index.html" href="index.html">HOME</a></li>
+  <li><a class="active" href="projects.html">PROJECTS</a>
+  <li><a href="contact.html">CONTACT</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+</ul>
+</div>
+
+    <br><br>
+<table style="width:100%">
+    <tr>
+        <td bgcolor="red">
+                          <p align=center style=" color:white; font-size:40px;">JAVASCRIPT</p>
+        </td>
+    </tr>
+    <tr>
+        <td align=center>
+    <div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, '1')">HAPPY BIRTHDAY</button>
+  <button class="tablinks" onmouseover="openCity(event, '2')">DO THE MATH</button>
+  <button class="tablinks" onmouseover="openCity(event, '3')">GRADE</button>
+  <button class="tablinks" onmouseover="openCity(event, '4')">SALARY</button>
+  <button class="tablinks" onmouseover="openCity(event, '5')">QUICK CHECK 3.3</button>
+  <button class="tablinks" onmouseover="openCity(event, '6')">STUDENT ID</button>
+  <button class="tablinks" onmouseover="openCity(event, '7')">CLASS RULES</button>
+  <button class="tablinks" onmouseover="openCity(event, '8')">DATE TIME</button>          
+</div>
+
+<div id="1" class="tabcontent">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>HAPPY BIRTHDAY</p>
+  
+  <a href="links/JAVASCRIPT/HAPPY BIRTHDAY.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/HAPPY_BIRTHDAY.png"  height="400" width="700" align="center">
+  <div class="overlay">
+  <div class="text">
+  This is a lab that asks the user for their birthday and determines if the current day is their birthday.
+  If it is, it will display a happy birthday message. 
+  If not the message 'have a nice day' will show.</div></div>
+  </div></div>
+  </a>
+</div></div>
+
+<div id="2" class="tabcontent">
+  <p>DO THE MATH</p>
+  <a href="links/JAVASCRIPT/DoTheMath.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/function_dothemath.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This program displays what the function DoTheMath will do.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="3" class="tabcontent">
+  <p>GRADE</p>
+  <a href="links/JAVASCRIPT/GRADE.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/GRADE.png"  height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This program prompts the user for a numerical grade and then displays the letter grade for the number entered.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="4" class="tabcontent">
+  <p>SALARY</p>
+  <a href="links/JAVASCRIPT/SALARY.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/SALARY.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This lab prompts the user for 10 salary values then displays the average of the 10 salaries.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="5" class="tabcontent">
+  <p>QUICK CHECK 3.3</p>
+  <a href="links/JAVASCRIPT/QUICK CHECK 3.3.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/quick_check_33.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This lab prompts the user to enter a value from 1-6 to display the corresponding answer to Quick Check 3.3.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="6" class="tabcontent">
+  <p>STUDENT ID</p>
+  <a href="links/JAVASCRIPT/STUDENT ID.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/STUDENTid.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This program prompts the user to enter an ID number from the list provided, then display the corresponding information about the ID entered.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="7" class="tabcontent">
+  <p>CLASS RULES</p>
+  <a href="links/JAVASCRIPT/ShowClassRules.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/class_rules.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This program prompts the user to enter a number from 0-10 then display the corresponding class rule for the number entered.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="8" class="tabcontent">
+  <p>DATE TIME</p>
+  <a href="links/JAVASCRIPT/DATE TIME.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/JAVASCRIPT/DATE_TIME.png" height="400" width="700">
+  <div class="overlay">
+  <div class="text">
+  This program the current week day, month, date, year, and time when loaded.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div class="clearfix"></div>
+</td>
+    </tr>
+    </table>
+	<table style="width:100%">
+    <tr>
+        <td bgcolor="red">
+                          <p align=center style=" color:white; font-size:40px;">HTML</p>
+        </td>
+    </tr>
+    <tr>
+        <td align=center>
+    <div class="tab1">
+  <button class="tablinks1" onmouseover="openCity1(event, '11')">ASSIGNMENT OPERATORS</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '22')">FORMS</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '33')">MATH METHODS</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '44')">NEST</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '55')">TARANTULAS</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '66')">STANDARD TABLES</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '77')">THE ROUND TABLE</button>
+  <button class="tablinks1" onmouseover="openCity1(event, '88')">WELCOME</button>          
+</div>
+
+<div id="11" class="tabcontent1">
+  <p>ASSIGNMENT OPERATORS</p>
+  <a href="links/html/ASSIGNMENT OPERATORS.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/ASSIGNMENT_OPERATORS.png"  height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This website displays what each assignment operator will do.
+  </div></div></div></div>
+  </a>
+  </a>
+</div>
+
+<div id="22" class="tabcontent1">
+  <p>FORMS</p>
+  <a href="links/html/DW FORMS.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/DW_FORMS.png" height="600" width="800">
+  <div class="overlay">
+  <div class="text">
+  This website has a form to order ice cream from Ben's Igloo.
+  </div></div></div></div>
+  </a>
+  </a>
+</div>
+
+<div id="33" class="tabcontent1">
+  <p>MATH METHODS</p>
+  <a href="links/html/Math Methods.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/MATH_OPERATORS.png"  height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This site shows the functions of various math methods.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="44" class="tabcontent1">
+  <p>NEST</p>
+  <a href="links/html/nested.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/nest.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is an example of a nested table showing the medals at the RIO 2016 Olympics.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="55" class="tabcontent1">
+  <p>TARANTULAS</p>
+  <a href="links/html/PROPERTY INSPECTOR PICTURES.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/TARANTULAS.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is an example of a website about tarantulas formatted using tables.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="66" class="tabcontent1">
+  <p>STANDARD TABLES</p>
+  <a href="links/html/STANDARD TABLE.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/STANDARD_TABLE.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This website is an example of using standard tables to format a site.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="77" class="tabcontent1">
+  <p>THE ROUND TABLE</p>
+  <a href="links/html/HOME PAGE.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/THE_ROUND_TABLE.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a group project I worked on last year with multiple webpages for the diner called The Round Table.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="88" class="tabcontent1">
+  <p>WELCOME</p>
+  <a href="links/html/welcome.html" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/HTML/welcome.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This site welcomes you to Computer Science 2.
+  </div></div></div></div>
+  </a>
+</div>
+<div class="clearfix1"></div>
+        </td>
+      </table>
+      
+<table style="width:100%">
+    <tr>
+        <td bgcolor="red">
+                          <p align=center style=" color:white; font-size:40px;">MOBILE APP DEVELOPMENT</p>
+        </td>
+    </tr>
+    <tr>
+        <td align=center>
+    <div class="tab2">
+  <button class="tablinks2" onmouseover="openCity2(event, '111')">PAINT POT 1</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '222')">PAINT POT 2</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '333')">BALL BOUNCE</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '444')">MINI GOLF 1</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '555')">MINI GOLF 2</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '666')">MOLE MASH 1</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '777')">MOLE MASH 2</button>
+  <button class="tablinks2" onmouseover="openCity2(event, '888')">HOUR OF CODE</button>
+            
+</div>
+
+<div id="111" class="tabcontent2">
+  <p>PAINT POT 1</p>
+    <a href="links/APP/PAINT_POT_1.apk" download>
+	<div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-055925.png"  height="800" width="600" align="center">
+   <div class="overlay">
+  <div class="text">
+  This app is a paint app that has four colors and a button to clear the canvas.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="222" class="tabcontent2">
+  <p>PAINT POT 2</p>
+  <a href="links/APP/PAINT_POT_2.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-061707.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is the second version of the paint app that includes multiple sizes of brushes to paint with.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="333" class="tabcontent2">
+  <p>BALL BOUNCE</p>
+  <a href="links/APP/BALL_BOUNCE.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190927-010411.png"  height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This app allows the user to swipe the ball and let it bounce around the screen.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="444" class="tabcontent2">
+  <p>MINI GOLF 1</p>
+  <a href="links/APP/MINI_GOLF.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-060409.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is the first version of the mini golf app that allow users to swipe to golf ball into the hole. 
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="555" class="tabcontent2">
+  <p>MINI GOLF 2</p>
+  <a href="links/APP/MINI_GOLF1.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-060722.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is the second version of the mini golf app which includes new game button, score count, hole count, 
+  arrow adjusters on the tee, and instructions.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="666" class="tabcontent2">
+  <p>MOLE MASH 1</p>
+  <a href="links/APP/MOLE_MASH.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-060052.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is the first version of the mole mash game that keeps track of the score.
+  </div></div></div></div>
+  </a>
+</div>
+<div id="777" class="tabcontent2">
+  <p>MOLE MASH 2</p>
+  <a href="links/APP/CS2_Javascript_POSTTESTLab2_ADA_LIN.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/APP/Screenshot_20190926-060157.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is the second version of the mole mash game that has the reset button and keeps track of score.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="888" class="tabcontent2">
+  <p>HOUR OF CODE</p>
+  <a href="links/APP/HourOfCode.apk" download>
+  <div class="container">
+  <div class="center">
+  <img src="images/app/Screenshot_20190926-061140.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This app buzzes and vibrates when the bee is tapped.
+  </div></div></div></div>
+  </a>
+</div>
+<div class="clearfix1"></div>
+
+</td>
+    </tr>
+    </table>
+            
+<table style="width:100%">
+    <tr>
+        <td bgcolor="red">
+                          <p align=center style=" color:white; font-size:40px;">C++</p>
+        </td>
+    </tr>
+    <tr>
+        <td align=center>
+    <div class="tab3">
+  <button class="tablinks3" onmouseover="openCity3(event, '1b')">ARRAY SUM</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '2b')">TEST AVERAGE</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '3b')">PYTHAGOREAN THEORM</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '4b')">DAYS SECONDS</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '5b')">FIND QUOTIENT, PRODUCT, REMAINDER</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '6b')">CIRCLE</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '7b')">AVERAGE GRADE</button>
+  <button class="tablinks3" onmouseover="openCity3(event, '8b')">TEMPERATURE</button>
+            
+</div>
+<!-- 
+ARRAY #10
+-->
+<div id="1b" class="tabcontent3">
+  <p>ARRAY SUM</p>
+    <a href="links/C++/ARRAY PROBLEMS.docx" download>
+	<div class="container">
+  <div class="center">
+  <img src="images/C++/C++1.png"  height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program prompts the user to enter six values into an aray and then finds the sum of the values.
+  </div></div></div></div>
+  </a>
+</div>
+
+<!-- ARRAY #14-->
+<div id="2b" class="tabcontent3">
+  <p>TEST AVERAGE</p>
+  <a href="links/C++/ARRAY PROBLEMS.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++2.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program prompts the user to enter 5 test grades then finds the average of the test grades.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="3b" class="tabcontent3">
+  <p>PYTHAGOREAN THEORM</p>
+  <a href="links/C++/Pythagorean Theorem Sample.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++3.png"  height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program calculates the hypotenuse of a triangle from two traingale lengths entered by the user.
+  </div></div></div></div>
+  </a>
+</div>
+
+<!-- In Out #3 -->
+<div id="4b" class="tabcontent3">
+  <p>DAYS SECONDS</p>
+  <a href="links/C++/IN_OUT PROBLEMS.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++4.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program convertes the number of days entered by the user into seconds.
+  </div></div></div></div>
+  </a>
+</div>
+
+<!-- In Out #5 -->
+<div id="5b" class="tabcontent3">
+  <p>FIND QUOTIENT, PRODUCT, REMAINDER</p>
+  <a href="links/C++/IN_OUT PROBLEMS.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++5.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program finds the quotient, product, and remainder from two values entered by the user.
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="6b" class="tabcontent3">
+  <p>CIRLCE</p>
+  <a href="links/C++/C++ CIRCLE.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++6.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program finds the circle area and diameter from the circle radius value entered by the user.
+  </div></div></div></div>
+  </a>
+</div>
+<!-- pg 32 #1 -->
+<div id="7b" class="tabcontent3">
+  <p>AVERAGE GRADE</p>
+  <a href="links/C++/IN_OUT PROBLEMS.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++7.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program finds the average of x amount of grades entered by the user. 
+  </div></div></div></div>
+  </a>
+</div>
+
+<div id="8b" class="tabcontent3">
+  <p>TEMPERATURE</p>
+  <a href="links/C++/C++ FAHRENHEIT.docx" target="_blank">
+  <div class="container">
+  <div class="center">
+  <img src="images/C++/C++8.png" height="500" width="900">
+   <div class="overlay">
+  <div class="text">
+  This program converts the celcius degrees into fahrenheit and kelvin degrees.
+  </div></div></div></div>
+  </a>
+</div>
+<div class="clearfix1"></div>
+
+</td>
+    </tr>
+    </table>
+    <table style="width:100%">
+    <tr>
+        <td bgcolor="red">
+                          <p align=center style=" color:white; font-size:40px;">PHOTOSHOP</p>
+        </td>
+    </tr>
+    <tr>
+        <td align=center>
+    <div class="tab4">
+  <button class="tablinks4" onmouseover="openCity4(event, 'a')">AUTUMN EQUINOX</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'b')">CLIMATE MARCH</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'c')">EMMY AWARDS</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'd')">FASHION WEEK</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'e')">IKEA</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'f')">LEAVES</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'g')">ZERO GRAVITY</button>
+  <button class="tablinks4" onmouseover="openCity4(event, 'h')">LOGO</button>          
+</div>
+
+<div id="a" class="tabcontent4">
+  <p>AUTUMN EQUINOX</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/autumn equinox.png"  height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for the Autumn Equinox.
+  </div></div></div></div>
+ 
+</div>
+
+<div id="b" class="tabcontent4">
+  <p>CLIMATE MARCH</p>
+  <div class="container">
+  <div class="center">
+  <a href="images/PHOTOSHOP/climate march.png">
+  <img src="images/PHOTOSHOP/climate march.png" height="600" width="800">
+  </a>
+   <div class="overlay">
+  <div class="text">
+  This is a poster for the 2019 Climate March.
+  </div></div></div></div>
+  
+</div>
+
+<div id="c" class="tabcontent4">
+  <p>EMMY AWARDS</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/emmy award.png"  height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for the 2019 Emmy Awards.
+  </div></div></div></div>
+  
+</div>
+<div id="d" class="tabcontent4">
+  <p>FASHION WEEK</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/fashionweek.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for the 2019 Fashion Week.
+  </div></div></div></div>
+  
+</div>
+
+<div id="e" class="tabcontent4">
+  <p>IKEA</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/ikea.png" height="800" width="600">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for IKEA.
+  </div></div></div></div>
+  
+</div>
+
+<div id="f" class="tabcontent4">
+  <p>LEAVES</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/leaves.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for green and fall orange leaves.
+  </div></div></div></div>
+  
+</div>
+<div id="g" class="tabcontent4">
+  <p>ZERO GRAVITY</p>
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/zero gravity.png" height="600" width="800">
+   <div class="overlay">
+  <div class="text">
+  This is a poster for zero gravity.
+  </div></div></div></div>
+  
+</div>
+
+<div id="h" class="tabcontent4">
+  <p>LOGO</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="container">
+  <div class="center">
+  <img src="images/PHOTOSHOP/Logo.png" height="600" width="600" align=center>
+   <div class="overlay">
+  <div class="text">
+  This is a picture of my first logo for this website.
+  </div></div></div></div>
+  
+</div>
+</td>
+</table>
+	<script>
+	alert("Hover over the tabs on the left to see my past projects.\nHover on the pictures to see a description of the project.\nClick on the picture to go to the site or download the file.\nThank you and have a nice day!");
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+function openCity1(evt, cityName) {
+    var i, tabcontent1, tablinks1;
+    tabcontent1 = document.getElementsByClassName("tabcontent1");
+    for (i = 0; i < tabcontent1.length; i++) {
+        tabcontent1[i].style.display = "none";
+    }
+    tablinks1 = document.getElementsByClassName("tablinks1");
+    for (i = 0; i < tablinks1.length; i++) {
+        tablinks1[i].className = tablinks1[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+function openCity2(evt, cityName) {
+    var i, tabcontent2, tablinks2;
+    tabcontent2 = document.getElementsByClassName("tabcontent2");
+    for (i = 0; i < tabcontent2.length; i++) {
+        tabcontent2[i].style.display = "none";
+    }
+    tablinks2 = document.getElementsByClassName("tablinks2");
+    for (i = 0; i < tablinks2.length; i++) {
+        tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+function openCity3(evt, cityName) {
+    var i, tabcontent3, tablinks3;
+    tabcontent3 = document.getElementsByClassName("tabcontent3");
+    for (i = 0; i < tabcontent3.length; i++) {
+        tabcontent3[i].style.display = "none";
+    }
+    tablinks3 = document.getElementsByClassName("tablinks3");
+    for (i = 0; i < tablinks3.length; i++) {
+        tablinks3[i].className = tablinks3[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+function openCity4(evt, cityName) {
+    var i, tabcontent4, tablinks4;
+    tabcontent4 = document.getElementsByClassName("tabcontent4");
+    for (i = 0; i < tabcontent4.length; i++) {
+        tabcontent4[i].style.display = "none";
+    }
+    tablinks4 = document.getElementsByClassName("tablinks4");
+    for (i = 0; i < tablinks4.length; i++) {
+        tablinks4[i].className = tablinks4[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+  </body>
+</html>
