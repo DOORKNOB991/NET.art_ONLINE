@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(143, 188, 143);
   
  var lo = map(mouseX, 0, width, 10, 300);
    var li = map(mouseY, 0, width, 10, 300);
